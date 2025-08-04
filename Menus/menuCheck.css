@@ -1,0 +1,46 @@
+#menu{
+    display: none; /*Esconde o ícone checkbox da tela*/
+}
+
+.menu-mobile li{
+    list-style-type: none;
+}
+/*ESTILIZANDO A LABEL*/
+.menuicone{
+    display: block;/*Exibe cada item, como um bloco, ocupando sua propria linha*/
+    background-color:black;
+    color: white;/*Cor letra*/
+    padding: 20px;
+    cursor: pointer;
+    width: fit-content;/*Ajusta a largura ao tamanho do conteúdo*/
+}
+/*ESTILO DO MENU OCULTO*/
+.menu-mobile{
+    padding-top: 2%;
+    display: none;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    width: 40%;
+    
+}
+li{
+    height: 50px;
+}
+/*ESTILIZAÇÃO DOS LINKS DENTRO DO MENU OCULTO*/
+.menu-mobile a{
+    color: white;
+    padding: 25px;
+    text-decoration: none;  
+    font-family:sans-serif;  
+     
+}
+
+.menu-mobile a:hover{
+    background-image: linear-gradient(to bottom,white,black, pink);
+      
+}
+
+/*Regra exibe o menu quando o checkbox é marcado (selecionado)*/
+#menu:checked + .menuicone + .menu-mobile{
+    display: flex;
+}

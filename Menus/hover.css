@@ -1,0 +1,34 @@
+.menu-hover,ul{
+    display: flex;
+    list-style: none;
+    gap:20px;    
+    padding: 10px 20px;
+    
+    justify-content: center;
+}
+.menu-hover{
+    background-image:linear-gradient(to bottom, black, rgb(220, 18, 18),rgb(61, 5, 181));
+}
+.menu-hover a{
+    
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    position: relative;
+    padding: 5px;
+    /*Transição suave na mudança de cor*/
+    transition: color 0.5s ease;
+}
+.menu-hover a::after{
+    content: "";/*Cria um elemento vazio - conteúdo vazio*/
+    position: absolute;/*Posição da linha em relação ao texto*/
+    bottom:0;
+    left: 0;/*A linha irá começar a aparecer do lado esquerdo*/
+    width: 0;/*linha começa "invisivel com 0% de largura*/
+    background-color: rgb(253, 1, 131);
+    transition: width 0.5s ease;
+    height: 2px;/*Adicionamos uma altura*/
+
+}
+.menu-hover a:hover::after{
+    width: 100%;
+}

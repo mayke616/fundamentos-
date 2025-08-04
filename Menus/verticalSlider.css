@@ -1,0 +1,52 @@
+/*DEFININDO A LATERAL FIXA PARA O MENU*/
+.menu-vertical{
+    display: none;/*Escondendo o menu*/
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    background-image: url(1126.jpg);
+    padding-top: 60px; /*Espaço entre o topo da tela*/
+    margin: -2%;
+    margin-top: 1%;
+}
+/*REMOVENDO OS MARCADORES E ATRIBUINDO ESPAÇAMENTO PADRÃO DA LISTA*/
+.menu-vertical li{
+    list-style: none;
+    padding: 0;
+}
+/*ESTILIZANDO OS LINKS DO MENU*/
+.menu-vertical a{
+    display: block;
+    color: rgb(233, 224, 224);
+    padding: 10px;
+    text-decoration: none;
+}
+a{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+/*EVENTO HOVER*/
+.menu-vertical a:hover{
+    background-color:rgb(92, 175, 105);
+}
+#menu{
+    display: none; /*Esconde o ícone checkbox da tela*/
+}
+
+.menuicone {
+    width: 208px;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 20px 40px;
+    display: inline-block;
+    background-color: #f8f8f8;
+    border: 5px solid #ccc; 
+    margin: 2%;
+}
+
+/*Regra exibe o menu quando o checkbox é marcado (selecionado)*/
+#menu:checked + .menuicone +  .menu-vertical{
+    display: flex;
+    flex-direction: column;
+}
